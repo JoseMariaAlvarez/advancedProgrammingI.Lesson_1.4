@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class ArrayListTest {
 
@@ -13,6 +14,13 @@ public class ArrayListTest {
 		}
 		System.out.println(numbers);
 		System.out.println(points);
+		
+		ArrayList<Integer> list = new ArrayList<>();
+		ArrayList<Integer> list2 = new ArrayList<>(list);
+		ArrayList<Integer> list3 = new ArrayList<>(List.of(1, 2, 3, 4));
+		ArrayList<String> list4 = new ArrayList<>(List.of(args));
+
+		
 	}
 
 }
