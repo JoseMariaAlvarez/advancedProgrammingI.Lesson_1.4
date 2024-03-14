@@ -2,15 +2,21 @@
 public class StringExamples {
 
 	public static void main(String[] args) {
+		try {
+			System.out.println(Integer.parseInt("Billy"));
+		} catch  (NumberFormatException e){
+			System.out.println("You fool." + e.getMessage());
+		}
+		
 		String myStr = "hello";
 		myStr = "bye";
 		String greeting = new String("hello and bye");
 
 		String userName = "Susan";
 		String goodMorningGreeting = "Good morning, " + userName;
-		userName += ".";
+		goodMorningGreeting += ".";
 		System.out.println(goodMorningGreeting);
-		// Good morning, Susan
+		// Good morning, Susan.
 
 		int counter = 1;
 		String firstUserName = "Susan", secondName = "Jack";
@@ -34,7 +40,7 @@ public class StringExamples {
 		boolean b2 = c1.equals(c3); // true (c1 y c3 refer to objects with the
 		// same content)
 		boolean b3 = c1 == c3; // false (c1 y c3 refer to different objects)
-		int r1 = c1.compareTo(c2); // < 0 ("billy" is lesser than "wig")
+		int r1 = c1.compareTo(c2); // < 0 ("Billy" is less than "wig")
 
 		System.out.println("c1.length() " + c1.length());
 		System.out.println("c1.charAt(1) " + c1.charAt(1));
@@ -52,7 +58,7 @@ public class StringExamples {
 		System.out.println("c1.concat(\" idol\") " + 
 		                    c1.concat(" idol")); // or +
 		System.out.println("String.format(\"%d %s\", 1, c1) " +
-		                    String.format("%d %s", 1, c1));
+		                    String.format("%04d %s", 1, c1));
 		
 	}
 
@@ -63,7 +69,7 @@ class Point{
 
 	public Point (double x, double y) {this.x = x; this.y = y;}
 
-	//	public String toString() {
-	//		return "(" + x + ", " + y + ")";
-	//	}
+		public String toString() {
+			return "(" + x + ", " + y + ")";
+		}
 }

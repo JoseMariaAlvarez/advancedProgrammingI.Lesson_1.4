@@ -1,3 +1,2 @@
-public record PairR(String first,
-		double second) {
+public record PairR(String first, double second) {
 }
